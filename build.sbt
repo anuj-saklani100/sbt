@@ -1,0 +1,5 @@
+lazy val root=(project in file("."))
+.aggregate(sp1,sp2)
+lazy val sp1=(project in file("sub-project-1"))
+lazy val sp2=(project in file("sub-project-2"))
+.dependsOn(sp1)
